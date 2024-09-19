@@ -1,0 +1,24 @@
+<div class="restaurant-detail p-card p-component" *ngIf="restaurant">
+  <h2 class="p-card-title">{{ restaurant.name }}</h2>
+  <p class="p-card-subtitle">{{ restaurant.description }}</p>
+  <p>{{ restaurant.address }}</p>
+  <p>{{ restaurant.phone }}</p>
+</div>
+<div class="restaurant-menu p-card p-component" *ngIf="restaurant">
+  <div class="p-grid p-nogutter">
+    <div class="p-col-12 p-md-4">
+      <div class="cards">
+        <a *ngFor="let menu of restaurant.menus" class="card-link no-underline">
+          <p-card>
+            <img [src]="menu.file" [alt]="menu.name" class="standard-img" />
+            <div class="p-card-body">
+              <h3 class="p-card-title">{{ menu.name }}</h3>
+              <p class="p-card-subtitle">{{ menu.description }}</p>
+              <p>{{ menu.price | currency }}</p>
+            </div>
+          </p-card>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

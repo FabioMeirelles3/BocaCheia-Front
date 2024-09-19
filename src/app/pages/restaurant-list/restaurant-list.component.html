@@ -1,0 +1,28 @@
+<div class="p-inputgroup">
+  <div class="search-bar">
+    <input
+      type="text"
+      pInputText
+      [(ngModel)]="searchTerm"
+      placeholder="Buscar restaurantes ou pratos"
+    />
+  </div>
+</div>
+<div class="cards">
+  <a
+    *ngFor="let restaurant of filterRestaurants(restaurants, searchTerm)"
+    [routerLink]="['/restaurants', restaurant.id]"
+    class="card-link no-underline"
+  >
+    <p-card
+      header="{{ restaurant.name }}"
+      subheader="{{ restaurant.description }}"
+    >
+      <img
+        [src]="restaurant.file"
+        [alt]="restaurant.name"
+        class="standard-img"
+      />
+    </p-card>
+  </a>
+</div>

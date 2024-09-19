@@ -1,0 +1,58 @@
+@media (max-width: 768px) {
+  .card-link {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .search-bar input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-link {
+    flex: 1 1 100%;
+  }
+}
+
+
+.search-bar {
+  text-align: center;
+  margin: 1.5em 1em;
+}
+
+.search-bar input {
+  padding: 0.5em;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: content-box;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-link {
+  margin: 10px;
+  width: 270px;
+  box-sizing: border-box;
+}
+
+.standard-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+.no-underline:hover {
+  text-decoration: none;
+}
